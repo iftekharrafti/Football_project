@@ -1,0 +1,223 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* Common Style */
+
+.container{
+    /* background-color: #ffffff; */
+    width:1000px;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
+    margin: auto;
+}
+.btn{
+    background-color: #E02C6D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding:10px 40px;
+    border: 1px solid #E02C6D;
+    margin-top: 27px;
+}
+/* Start Header Section */
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    width:100%;
+    background-color: #2D25A0;
+    color: #ffffff;
+    padding:60px 150px;
+}
+.header-info{
+    padding: 90px 0 0;
+}
+.header-info h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+header .btn{
+    transition: transform 1s;
+    background:transparent;
+}
+header .btn:hover{
+    background-color: #E02C6D;
+    transform: scale(1.2);
+}
+.header-info .fas{
+    padding-top: 2px;
+}
+.header-image img{
+    width:100%;
+}
+            /* End header section */
+
+            /* Start Players */
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    
+}
+.player{
+    box-shadow: gray 5px 10px 20px;
+    padding:10px 10px 15px;
+}
+.player img{
+    width:100%;
+}
+.player h3{
+    font-size: 26px;
+    font-weight: 600;
+}
+.player p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+            /* Football */
+
+.football{
+    background:url('../images/players/football.jpg');
+    padding:60px 150px;
+    text-align: center;
+    color:#fff;
+    margin: 25px 0;
+}
+.football h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.football p{
+    font-size: 16px;
+    padding: 0 15px 0 15px;
+}
+.football-players{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2em;
+    margin:30px 0;
+}
+.football-player img{
+    width:100%;
+}
+
+            /* certificate-criteria */
+
+.certificate-criteria{
+    padding:60px 150px;
+    text-align: center;
+    color: #222;
+}
+.certificate-criteria h2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.certificates{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2em; 
+    margin:30px 0;
+}
+.certificate img{
+    width:100%;
+}
+
+
+            /* Footer */
+
+footer{
+    text-align: center;
+    padding:40px
+}
+footer img{
+    width:480px;
+    height:110px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+footer .fab{
+    width:32px;
+    height:32px;
+    padding: 8px;
+    margin-right: 14px;
+    background-color: #E7E7E8;
+    color:#424242;
+    border-radius:50%;
+}
+footer p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+            /* Media Queries */
+
+@media only screen and (max-width:767px){
+    main{
+        overflow: hidden;
+    }
+    header,  .football-players, .certificates{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .players{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header{
+        width:100%;
+        padding:20px;
+    }
+    .header-info{
+        margin-bottom: 40px;
+    }
+    header h1{
+        font-size: 30px;
+    }
+    .player{
+        width:40%;
+        margin-bottom: 24px;
+    }
+    .player img{
+        width:100%;
+        margin:auto;
+    }
+    .football, .certificate-criteria{
+        padding:20px;
+    }
+    footer img{
+        width:240px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    main{
+        overflow:hidden;
+    }
+    header, .players, .football-players, .certificates{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header-info{
+        padding:0;
+    }
+    .player{
+        width:60%;
+        margin-bottom: 24px;
+    }
+}
